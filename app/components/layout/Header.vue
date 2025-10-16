@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-warm-ivory py-4">
+  <header class="bg-warm-ivory py-4 fixed top-0 w-full z-50 h-16">
     <div class="container mx-auto flex justify-between items-center px-4">
       <div class="text-2xl font-serif text-rich-brown">Eternal Love</div>
       <nav>
