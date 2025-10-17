@@ -4,8 +4,8 @@
     <FeaturedCollections />
     <BestSellers />
     <About />
-    <Testimonials />
-    <Newsletter />
+    <!-- <Testimonials />
+    <Newsletter /> -->
   </div>
 </template>
 

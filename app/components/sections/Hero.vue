@@ -25,7 +25,8 @@
 
 <script setup lang="ts"></script>
 
-<style>
+<style scoped>
 section {
-  background-image: url('~/assets/images/hero.png');
+  background-image: url('assets/images/hero.png');
+  background-image: url('assets/images/hero.webp');
 }</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-warm-ivory font-sans">
     <Header />
-    <main>
+    <main class="pt-20">
       <slot />
     </main>
     <Footer />

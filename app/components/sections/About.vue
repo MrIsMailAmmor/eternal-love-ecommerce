@@ -1,20 +1,45 @@
 <template>
-  <section class="py-16 bg-warm-ivory">
-    <div class="container mx-auto flex flex-col md:flex-row items-center px-4">
+  <section class="bg-warm-ivory py-20 relative">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center gap-12"
+    >
+      <!-- Image -->
       <div class="md:w-1/2">
-        <!-- Placeholder for image of hands tying a ribbon -->
-        <img src="/images/hands-ribbon.png" alt="Hands tying a ribbon" class="rounded-2xl shadow-lg">
+        <NuxtImg
+          src="/forHer.png"
+          alt="Eternal Love gift set"
+          class="rounded-lg shadow-lg object-cover w-full h-full"
+        />
       </div>
-      <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-        <h2 class="text-4xl font-serif text-rich-brown mb-6">Our Philosophy</h2>
-        <p class="text-lg text-rich-brown leading-relaxed">
-          At Eternal Love, every gift tells a story — of connection, warmth, and timeless affection.
-          We believe in curating moments that linger, beautifully wrapped and thoughtfully chosen.
+
+      <!-- Text -->
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-serif text-deep-brown mb-4">Our Philosophy</h2>
+        <div class="w-20 h-1 bg-gold mb-6"></div>
+        <p class="text-lg text-warm-gray leading-relaxed mb-6">
+          At
+          <span class="font-handwritten text-2xl text-blush">Eternal Love</span
+          >,
+          every gift tells a story — of connection, warmth, and timeless
+          affection. We believe in crafting moments that linger in hearts,
+          celebrating love in its most sincere form.
+        </p>
+        <p class="text-md text-warm-gray">
+          From delicate candles to beautifully curated gift boxes, each creation
+          is designed to speak the language of emotion and make your loved ones
+          feel truly cherished.
         </p>
       </div>
     </div>
+     <div class="absolute opacity-50 right-0 bottom-0">
+      <FallInLove mainColor="#ff6f91" width="100%" height="100%"/>
+      <!-- <HeartPattern mainColor="#ff6f91" width="100%" height="100%"/> -->
+     </div> 
   </section>
 </template>
 
 <script setup lang="ts">
+import WomenHoldHeart from '~/components/illustrations/WomenHoldHeart.vue';
+import HeartPattern from '~/components/illustrations/HeartPattern.vue';
 </script>
+<style></style>
