@@ -102,7 +102,10 @@
 </template>
 <script setup lang="ts">
 defineProps({
-  heartColor: String,
+  heartColor: {
+    type: String,
+    default: "",
+  }
 });
 </script>
 <style lang=""></style>
