@@ -1,26 +1,25 @@
-import js from "@eslint/js";
-import globals from "globals";
+
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
-import { defineConfig } from "eslint/config";
+import nuxtPlugin from "@nuxt/eslint-plugin";
+import vueEslintParser from "vue-eslint-parser";
 
-export default defineConfig([
-  {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,vue}"],
-    plugins: { js },
-    extends: ["ts/recommended"],
-    languageOptions: { globals: globals.browser },
-  },
-  tseslint.configs.recommended,
-  pluginVue.configs["flat/essential"],
+export default tseslint.config(
+  ...tseslint.configs.recommended,
+  ...pluginVue.configs["flat/recommended"],
   {
     files: ["**/*.vue"],
-    languageOptions: { parserOptions: { parser: tseslint.parser } },
-  },
-  {
-    files: ["**/*.vue"],
+    languageOptions: {
+      parser: vueEslintParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+    plugins: {
+      nuxt: nuxtPlugin,
+    },
     rules: {
       "vue/multi-word-component-names": "off",
     },
-  },
-]);
+  }
+);

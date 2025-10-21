@@ -1,9 +1,11 @@
 <template>
   <section class="py-16 bg-blush-nude">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-serif text-rich-brown mb-8">Our Best Sellers</h2>
+      <h2 class="text-4xl font-serif text-rich-brown mb-8">
+        Our Best Sellers
+      </h2>
       <div class="grid md:grid-cols-4 gap-6 px-4">
-          <BestSellerCard
+        <BestSellerCard
           title="Velvet Rose Box"
           description="A timeless bouquet of red and ivory roses."
           image="best-sellers/forHer.png"

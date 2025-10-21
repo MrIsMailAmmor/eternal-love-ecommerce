@@ -1,15 +1,36 @@
 <template>
-  <section class="py-16 bg-warm-ivory">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-4xl font-serif text-rich-brown mb-6">Stay close to what matters.</h2>
-      <p class="text-lg text-rich-brown mb-8">Subscribe to our newsletter for exclusive offers and heartfelt stories.</p>
-      <div class="flex justify-center">
-        <input type="email" placeholder="Your email address" class="p-3 rounded-l-2xl border-2 border-champagne-gold focus:outline-none focus:border-burgundy-red w-full max-w-md">
-        <button class="bg-champagne-gold text-rich-brown font-bold py-3 px-6 rounded-r-2xl hover:bg-opacity-80 transition-colors">Subscribe</button>
-      </div>
+  <section class="relative bg-gradient-to-b from-[#fff8f2] to-[#fbeee8] py-24 text-center overflow-hidden">
+    <div class="absolute inset-0 bg-[url('assets/images/soft-petals.png')] bg-cover bg-center opacity-30 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-serif text-[#4a3b2d] mb-4">
+        Stay close to what matters.
+      </h2>
+      <p class="text-[#7c6e64] mb-8 text-lg">
+        Be the first to discover new collections, stories, and gifts made with love.
+      </p>
+
+      <form class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="w-full sm:w-auto flex-1 rounded-full border border-[#d4af37] bg-white/80 text-[#4a3b2d] px-6 py-3 placeholder-[#b8a89b] focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+        />
+        <button
+          type="submit"
+          class="bg-[#d4af37] text-white font-medium rounded-full px-8 py-3 hover:bg-[#c19d32] transition-all shadow-md hover:shadow-gold-glow"
+        >
+          Join with Love ❤️
+        </button>
+      </form>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-</script>
+<style>
+@layer utilities {
+  .shadow-gold-glow {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+}
+</style>

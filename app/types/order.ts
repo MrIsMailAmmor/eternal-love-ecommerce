@@ -1,5 +1,5 @@
-import { User } from './auth';
-import { Product } from './product';
+import type { User } from './auth';
+import type { Product } from './product';
 
 export interface Order {
   id: string;

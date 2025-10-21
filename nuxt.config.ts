@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@nuxtjs/i18n', '@nuxt/image'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/eslint'],
   i18n: {
     defaultLocale: 'fr',
     locales: [{ code: 'fr', name: 'French', file: 'fr.json' }],

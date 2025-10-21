@@ -1,12 +1,12 @@
 <template>
   <section class="py-16 bg-warm-ivory relative">
     <HeartPattern
-      mainColor="#ff6f91"
+      main-color="#ff6f91"
       class="absolute opacity-50 top-0 left-0 z-1"
       height="fit-content"
     />
     <CoupleTogether
-      mainColor="#ff6f91"
+      main-color="#ff6f91"
       class="absolute opacity-50 bottom-0 right-0 z-1"
     />
     <div class="container mx-auto text-center">

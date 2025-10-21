@@ -14,12 +14,13 @@
 
       <!-- Text -->
       <div class="md:w-1/2">
-        <h2 class="text-4xl font-serif text-deep-brown mb-4">Our Philosophy</h2>
-        <div class="w-20 h-1 bg-gold mb-6"></div>
+        <h2 class="text-4xl font-serif text-deep-brown mb-4">
+          Our Philosophy
+        </h2>
+        <div class="w-20 h-1 bg-gold mb-6" />
         <p class="text-lg text-warm-gray leading-relaxed mb-6">
           At
-          <span class="font-handwritten text-2xl text-blush">Eternal Love</span
-          >,
+          <span class="font-handwritten text-2xl text-blush">Eternal Love</span>,
           every gift tells a story — of connection, warmth, and timeless
           affection. We believe in crafting moments that linger in hearts,
           celebrating love in its most sincere form.
@@ -31,15 +32,17 @@
         </p>
       </div>
     </div>
-     <div class="absolute opacity-50 right-0 bottom-0">
-      <FallInLove mainColor="#ff6f91" width="100%" height="100%"/>
+    <div class="absolute opacity-50 right-0 bottom-0">
+      <FallInLove
+        main-color="#ff6f91"
+        width="100%"
+        height="100%"
+      />
       <!-- <HeartPattern mainColor="#ff6f91" width="100%" height="100%"/> -->
-     </div> 
+    </div> 
   </section>
 </template>
 
 <script setup lang="ts">
-import WomenHoldHeart from '~/components/illustrations/WomenHoldHeart.vue';
-import HeartPattern from '~/components/illustrations/HeartPattern.vue';
 </script>
 <style></style>
