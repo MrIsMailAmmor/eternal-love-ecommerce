@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-warm-ivory py-20 relative">
+  <section class="bg-blush-nude py-20 relative">
     <div
-      class="container mx-auto flex flex-col md:flex-row items-center gap-12"
+      class="container mx-auto flex flex-col md:flex-row items-center gap-12 px-4"
     >
       <!-- Image -->
       <div class="md:w-1/2">
@@ -14,18 +14,18 @@
 
       <!-- Text -->
       <div class="md:w-1/2">
-        <h2 class="text-4xl font-serif text-deep-brown mb-4">
+        <h2 class="text-4xl font-serif text-secondary mb-4">
           Our Philosophy
         </h2>
-        <div class="w-20 h-1 bg-gold mb-6" />
-        <p class="text-lg text-warm-gray leading-relaxed mb-6">
+        <div class="w-20 h-1 bg-primary mb-6" />
+        <p class="text-lg text-secondary leading-relaxed mb-6">
           At
-          <span class="font-handwritten text-2xl text-blush">Eternal Love</span>,
+          <span class="font-serif text-2xl text-primary">Eternal Love</span>,
           every gift tells a story — of connection, warmth, and timeless
           affection. We believe in crafting moments that linger in hearts,
           celebrating love in its most sincere form.
         </p>
-        <p class="text-md text-warm-gray">
+        <p class="text-md text-secondary">
           From delicate candles to beautifully curated gift boxes, each creation
           is designed to speak the language of emotion and make your loved ones
           feel truly cherished.
@@ -34,15 +34,11 @@
     </div>
     <div class="absolute opacity-50 right-0 bottom-0">
       <FallInLove
-        main-color="#ff6f91"
+        main-color="#6B1E1E"
         width="100%"
         height="100%"
       />
       <!-- <HeartPattern mainColor="#ff6f91" width="100%" height="100%"/> -->
-    </div> 
+    </div>
   </section>
 </template>
-
-<script setup lang="ts">
-</script>
-<style></style>

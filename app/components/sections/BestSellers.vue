@@ -1,7 +1,7 @@
 <template>
-  <section class="py-16 bg-blush-nude">
+  <section class="py-16 bg-warm-ivory">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-serif text-rich-brown mb-8">
+      <h2 class="text-4xl font-serif text-secondary mb-8">
         Our Best Sellers
       </h2>
       <div class="grid md:grid-cols-4 gap-6 px-4">
