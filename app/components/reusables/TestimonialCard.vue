@@ -1,14 +1,10 @@
 <template>
   <section>
-   
-
     <div
-      class="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8 border border-[#f4e2c2] relative transition-transform duration-300 hover:scale-105 hover:shadow-gold-glow"
+      class="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8 border border-[#f4e2c2] relative transition-transform duration-300 hover:scale-105 hover:shadow-gold-glow cursor-pointer"
     >
       <!-- quote icon -->
-      <div class="text-[#b8923a] text-5xl mb-4">
-        “
-      </div>
+      <div class="text-[#b8923a] text-5xl mb-4">“</div>
 
       <!-- quote text -->
       <p class="text-[#4a3b2d] text-lg italic leading-relaxed mb-6">

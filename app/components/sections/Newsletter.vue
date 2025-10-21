@@ -1,13 +1,14 @@
 <template>
-  <section class="relative bg-gradient-to-b from-[#fff8f2] to-[#fbeee8] py-24 text-center overflow-hidden">
-    <div class="absolute inset-0 bg-[url('assets/images/soft-petals.png')] bg-cover bg-center opacity-30 pointer-events-none"></div>
-
+  <section
+    class="relative bg-gradient-to-b from-[#fff8f2] to-[#fbeee8] py-24 text-center overflow-hidden"
+  >
     <div class="relative z-10 max-w-2xl mx-auto px-6">
       <h2 class="text-4xl font-serif text-[#4a3b2d] mb-4">
         Stay close to what matters.
       </h2>
       <p class="text-[#7c6e64] mb-8 text-lg">
-        Be the first to discover new collections, stories, and gifts made with love.
+        Be the first to discover new collections, stories, and gifts made with
+        love.
       </p>
 
       <form class="flex flex-col sm:flex-row items-center gap-4 justify-center">

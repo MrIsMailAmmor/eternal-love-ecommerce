@@ -4,7 +4,6 @@
     <FeaturedCollections />
     <BestSellers />
     <About />
-
     <Testimonials />
     <Newsletter />
   </div>
