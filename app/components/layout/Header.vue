@@ -14,29 +14,38 @@
       <nav class="hidden md:flex">
         <ul class="flex space-x-8 items-center text-secondary">
           <li>
-            <a href="/products" class="hover:text-primary transition-colors"
-              >Shop</a
-            >
+            <a
+              href="/products"
+              class="hover:text-primary transition-colors"
+            >Shop</a>
           </li>
           <li>
-            <a href="#" class="hover:text-primary transition-colors"
-              >Collections</a
-            >
+            <a
+              href="#"
+              class="hover:text-primary transition-colors"
+            >Collections</a>
           </li>
           <li>
-            <a href="#" class="hover:text-primary transition-colors">About</a>
+            <a
+              href="#"
+              class="hover:text-primary transition-colors"
+            >About</a>
           </li>
           <li>
-            <a href="#" class="hover:text-primary transition-colors"
-              >Contact</a
-            >
+            <a
+              href="#"
+              class="hover:text-primary transition-colors"
+            >Contact</a>
           </li>
         </ul>
       </nav>
 
       <!-- Actions -->
       <div class="flex items-center space-x-6 text-secondary">
-        <a href="#" class="hover:text-primary transition-colors">
+        <a
+          href="#"
+          class="hover:text-primary transition-colors"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -52,7 +61,10 @@
             />
           </svg>
         </a>
-        <a href="/account/profile" class="hover:text-primary transition-colors">
+        <a
+          href="/account/profile"
+          class="hover:text-primary transition-colors"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -68,7 +80,10 @@
             />
           </svg>
         </a>
-        <a href="#" class="hover:text-primary transition-colors">
+        <a
+          href="#"
+          class="hover:text-primary transition-colors"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
