@@ -9,6 +9,7 @@ export default <Partial<Config>>{
         accent: '#D5BDAF',
         'warm-ivory': '#F8F4F0',
         'blush-nude': '#EAD7D1',
+        'primary-light': '#D5BDAF',
       },
       fontFamily: {
         serif: ['Cormorant Garamond', 'Playfair Display', 'serif'],

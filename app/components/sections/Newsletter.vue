@@ -19,13 +19,15 @@
             placeholder="Enter your email"
             class="w-full sm:w-auto flex-1 rounded-full border border-primary bg-white/80 text-secondary px-6 py-3 placeholder-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary"
           >
-          <button
+          <CustomButton
             type="submit"
+            variant="primary"
+            size="medium"
             class="bg-secondary text-warm-ivory font-medium rounded-full px-8 py-3 hover:bg-secondary/90 transition-all shadow-md flex items-center gap-2"
           >
             <span>Join with Love</span>
             <Icon name="uil:envelope-heart" />
-          </button>
+          </CustomButton>
         </form>
       </div>
 
