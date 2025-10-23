@@ -17,19 +17,21 @@
       <p class="text-sm text-gray-600 mb-4">
         {{ description }}
       </p>
-      <button
+      <CustomButton
+        variant="primary"
+        size="medium"
         class="bg-accent text-secondary text-sm font-medium px-6 py-2 rounded-full hover:bg-primary hover:text-warm-ivory transition"
       >
         Add to Box
-      </button>
+      </CustomButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  title: {type : String, default : ""},
-  description: {type : String, default : ""},
-  image: {type : String, default : ""},
-})
+  title: { type: String, default: "" },
+  description: { type: String, default: "" },
+  image: { type: String, default: "" },
+});
 </script>
