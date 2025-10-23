@@ -2,7 +2,10 @@
   <NuxtLayout name="default">
     <NuxtPage />
   </NuxtLayout>
-  <div v-if="loading" class="loading-overlay">
+  <div
+    v-if="loading"
+    class="loading-overlay"
+  >
     <LoadingSpinner />
   </div>
 </template>

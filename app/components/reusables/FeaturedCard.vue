@@ -17,7 +17,9 @@
       <p class="text-sm text-gray-600 mb-4">
         {{ product.description }}
       </p>
-      <p class="text-lg font-bold text-primary mb-4">${{ product.price }}</p>
+      <p class="text-lg font-bold text-primary mb-4">
+        ${{ product.price }}
+      </p>
       <NuxtLink
         :to="`/products/${product.id}`"
         class="text-sm font-medium text-primary hover:underline mr-4"

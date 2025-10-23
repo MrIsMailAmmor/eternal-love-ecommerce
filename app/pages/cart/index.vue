@@ -8,7 +8,9 @@
       v-if="cartStore.cartItemCount === 0"
       class="text-center text-gray-600 py-10"
     >
-      <p class="text-lg mb-4">Your cart is currently empty.</p>
+      <p class="text-lg mb-4">
+        Your cart is currently empty.
+      </p>
       <CustomButton
         variant="primary"
         size="large"
@@ -19,7 +21,10 @@
       </CustomButton>
     </div>
 
-    <div v-else class="flex flex-col lg:flex-row gap-8">
+    <div
+      v-else
+      class="flex flex-col lg:flex-row gap-8"
+    >
       <!-- Cart Items List -->
       <div class="lg:w-2/3 bg-white p-6 rounded-lg shadow-lg">
         <h2 class="text-2xl font-semibold mb-6 text-primary">
@@ -40,16 +45,20 @@
               <p class="font-medium text-lg text-secondary">
                 {{ item.name }}
               </p>
-              <p class="text-gray-700">${{ item.price }} each</p>
+              <p class="text-gray-700">
+                ${{ item.price }} each
+              </p>
               <div
                 v-if="
                   item.type === 'box' &&
-                  item.contains &&
-                  item.contains.length > 0
+                    item.contains &&
+                    item.contains.length > 0
                 "
                 class="mt-2 text-sm text-gray-600"
               >
-                <p class="font-semibold">Contents:</p>
+                <p class="font-semibold">
+                  Contents:
+                </p>
                 <ul class="list-disc list-inside ml-4">
                   <li
                     v-for="content in getBoxContentsDetails(item)"
@@ -110,12 +119,8 @@
             Order Summary
           </h2>
           <div class="flex justify-between items-center mb-3">
-            <span class="text-gray-700"
-              >Subtotal ({{ cartStore.cartItemCount }} items):</span
-            >
-            <span class="font-medium text-secondary"
-              >${{ cartStore.cartTotal.toFixed(2) }}</span
-            >
+            <span class="text-gray-700">Subtotal ({{ cartStore.cartItemCount }} items):</span>
+            <span class="font-medium text-secondary">${{ cartStore.cartTotal.toFixed(2) }}</span>
           </div>
           <div class="flex justify-between items-center mb-6">
             <span class="text-gray-700">Shipping:</span>
@@ -128,7 +133,10 @@
             <span>${{ cartStore.cartTotal.toFixed(2) }}</span>
           </div>
           <!-- Replace with actual checkout logic -->
-          <NuxtLink to="/checkout" class="block w-full">
+          <NuxtLink
+            to="/checkout"
+            class="block w-full"
+          >
             <CustomButton
               variant="primary"
               size="large"

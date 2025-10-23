@@ -5,8 +5,12 @@
     <div class="absolute inset-0 bg-black opacity-40" />
 
     <div class="z-10 p-8 text-warm-ivory">
-      <h1 class="text-6xl font-serif mb-4">LOVE LETTERS & LEGACY</h1>
-      <p class="text-xl mb-8">Curate Moments to Cherish, Forever Yours</p>
+      <h1 class="text-6xl font-serif mb-4">
+        LOVE LETTERS & LEGACY
+      </h1>
+      <p class="text-xl mb-8">
+        Curate Moments to Cherish, Forever Yours
+      </p>
       <div class="space-x-4">
         <CustomButton
           variant="primary"

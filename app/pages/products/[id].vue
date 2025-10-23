@@ -1,15 +1,27 @@
 <template>
   <section class="container mx-auto px-4 py-8">
-    <div v-if="productStore.loading" class="text-center text-gray-500">
+    <div
+      v-if="productStore.loading"
+      class="text-center text-gray-500"
+    >
       Loading product details...
     </div>
-    <div v-else-if="productStore.error" class="text-center text-red-500">
+    <div
+      v-else-if="productStore.error"
+      class="text-center text-red-500"
+    >
       Error: {{ productStore.error }}
     </div>
-    <div v-else-if="!product" class="text-center text-gray-500">
+    <div
+      v-else-if="!product"
+      class="text-center text-gray-500"
+    >
       Product not found.
     </div>
-    <div v-else class="flex flex-col md:flex-row gap-8 items-start">
+    <div
+      v-else
+      class="flex flex-col md:flex-row gap-8 items-start"
+    >
       <div class="md:w-1/2">
         <NuxtImg
           :src="product.image"
@@ -21,13 +33,20 @@
         <h1 class="text-4xl font-bold mb-4">
           {{ product.name }}
         </h1>
-        <p class="text-xl text-gray-700 mb-4">${{ product.price }}</p>
+        <p class="text-xl text-gray-700 mb-4">
+          ${{ product.price }}
+        </p>
         <p class="text-gray-600 mb-6">
           {{ product.description }}
         </p>
 
-        <div v-if="product.type === 'box'" class="mb-6">
-          <h2 class="text-2xl font-semibold mb-3">Box Contents:</h2>
+        <div
+          v-if="product.type === 'box'"
+          class="mb-6"
+        >
+          <h2 class="text-2xl font-semibold mb-3">
+            Box Contents:
+          </h2>
           <ul class="list-disc list-inside ml-4">
             <li
               v-for="item in boxContents"

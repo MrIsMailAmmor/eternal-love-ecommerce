@@ -13,7 +13,7 @@
     ]"
     @click="$emit('click')"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
@@ -37,7 +37,7 @@ const variantClasses = computed(() => {
     case "secondary":
       return "bg-gray-200 text-gray-800 hover:bg-gray-300";
     case "danger":
-      return 'bg-red-500 text-white hover:bg-red-700 hover:shadow-lg hover:text-white';
+      return "bg-red-500 text-white hover:bg-red-700 hover:shadow-lg hover:text-white";
     case "outline":
       return "border border-rose-500 text-rose-500 hover:bg-rose-50 hover:text-rose-600";
     default:

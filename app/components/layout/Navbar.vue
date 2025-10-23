@@ -5,7 +5,9 @@
     <div class="container mx-auto flex justify-between items-center px-6 h-20">
       <!-- Logo -->
       <div class="text-3xl font-serif text-secondary">
-        <NuxtLink to="/"> Eternal Love </NuxtLink>
+        <NuxtLink to="/">
+          Eternal Love
+        </NuxtLink>
       </div>
 
       <!-- Navigation -->
@@ -28,17 +30,26 @@
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="#" class="hover:text-primary transition-colors">
+            <NuxtLink
+              to="#"
+              class="hover:text-primary transition-colors"
+            >
               Collections
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="#" class="hover:text-primary transition-colors">
+            <NuxtLink
+              to="#"
+              class="hover:text-primary transition-colors"
+            >
               About
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="#" class="hover:text-primary transition-colors">
+            <NuxtLink
+              to="#"
+              class="hover:text-primary transition-colors"
+            >
               Contact
             </NuxtLink>
           </li>
@@ -48,25 +59,54 @@
       <!-- Actions -->
       <div class="flex items-center space-x-6 text-secondary">
         <NuxtLink class="hover:text-primary transition-colors">
-          <Icon name="uil:search" class="h-6 w-6" />
+          <Icon
+            name="uil:search"
+            class="h-6 w-6"
+          />
         </NuxtLink>
-        <NuxtLink
-          to="/account/profile"
-          class="hover:text-primary transition-colors"
-        >
-          <Icon name="uil:user" class="h-6 w-6" />
-        </NuxtLink>
-
+      
+        <template v-if="authStore.isAuthenticated">
+          <NuxtLink
+            to="/account/profile"
+            class="hover:text-primary transition-colors"
+          >
+            <Icon
+              name="uil:user"
+              class="h-6 w-6"
+            />
+          </NuxtLink>
+        </template>
+        <template v-else>
+          <NuxtLink
+            to="/auth/login"
+            class="hover:text-primary transition-colors text-sm md:text-base"
+          >
+            Login
+          </NuxtLink>
+          <span class="text-gray-400 hidden md:inline">|</span>
+          <NuxtLink
+            to="/auth/register"
+            class="hover:text-primary transition-colors text-sm md:text-base hidden md:inline"
+          >
+            Register
+          </NuxtLink>
+        </template>
+      
         <!-- Cart Dropdown -->
-
-        <div ref="cartDropdownRef" class="relative">
+        <div
+          ref="cartDropdownRef"
+          class="relative"
+        >
           <CustomButton
             variant="outline"
             size="medium"
             class="hover:text-primary transition-colors flex items-center"
             @click="toggleCartDropdown"
           >
-            <Icon name="uil:shopping-cart" class="h-6 w-6" />
+            <Icon
+              name="uil:shopping-cart"
+              class="h-6 w-6"
+            />
 
             <span
               v-if="cartStore.cartItemCount > 0"
@@ -93,7 +133,10 @@
               Your cart is empty.
             </div>
 
-            <div v-else class="grow flex flex-col">
+            <div
+              v-else
+              class="grow flex flex-col"
+            >
               <ul class="grow overflow-y-auto max-h-60">
                 <li
                   v-for="item in cartStore.cartItems"
@@ -112,7 +155,9 @@
                         {{ item.name }}
                       </p>
 
-                      <p class="text-sm text-gray-600">${{ item.price }}</p>
+                      <p class="text-sm text-gray-600">
+                        ${{ item.price }}
+                      </p>
                     </div>
                   </div>
 
@@ -157,8 +202,10 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import { useCartStore } from "~/stores/cartStore";
+import { useAuthStore } from "~/stores/authStore";
 
 const cartStore = useCartStore();
+const authStore = useAuthStore();
 
 const isCartDropdownOpen = ref(false);
 

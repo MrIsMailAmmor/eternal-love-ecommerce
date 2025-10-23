@@ -1,6 +1,8 @@
 <template>
   <section class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8 text-center text-secondary">Checkout</h1>
+    <h1 class="text-3xl font-bold mb-8 text-center text-secondary">
+      Checkout
+    </h1>
 
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Delivery Information Form -->
@@ -14,100 +16,102 @@
               <label
                 for="fullName"
                 class="block text-sm font-medium text-gray-700"
-                >Full Name</label
-              >
+              >Full Name</label>
               <input
                 id="fullName"
                 v-model="deliveryInfo.fullName"
                 type="text"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700"
-                >Email</label
-              >
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700"
+              >Email</label>
               <input
                 id="email"
                 v-model="deliveryInfo.email"
                 type="email"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
-              <label for="phone" class="block text-sm font-medium text-gray-700"
-                >Phone Number</label
-              >
+              <label
+                for="phone"
+                class="block text-sm font-medium text-gray-700"
+              >Phone Number</label>
               <input
                 id="phone"
                 v-model="deliveryInfo.phone"
                 type="tel"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
               <label
                 for="address"
                 class="block text-sm font-medium text-gray-700"
-                >Address</label
-              >
+              >Address</label>
               <input
                 id="address"
                 v-model="deliveryInfo.address"
                 type="text"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
-              <label for="city" class="block text-sm font-medium text-gray-700"
-                >City</label
-              >
+              <label
+                for="city"
+                class="block text-sm font-medium text-gray-700"
+              >City</label>
               <input
                 id="city"
                 v-model="deliveryInfo.city"
                 type="text"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
               <label
                 for="postalCode"
                 class="block text-sm font-medium text-gray-700"
-                >Postal Code</label
-              >
+              >Postal Code</label>
               <input
                 id="postalCode"
                 v-model="deliveryInfo.postalCode"
                 type="text"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
             <div>
               <label
                 for="country"
                 class="block text-sm font-medium text-gray-700"
-                >Country</label
-              >
+              >Country</label>
               <input
                 id="country"
                 v-model="deliveryInfo.country"
                 type="text"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500"
                 required
-              />
+              >
             </div>
           </div>
 
           <h2 class="text-2xl font-semibold mb-6 text-primary">
             Order Summary
           </h2>
-          <div v-if="cartStore.cartItemCount === 0" class="text-gray-600 mb-4">
+          <div
+            v-if="cartStore.cartItemCount === 0"
+            class="text-gray-600 mb-4"
+          >
             Your cart is empty. Please add items before checking out.
           </div>
           <div v-else>
@@ -132,17 +136,13 @@
                     </p>
                   </div>
                 </div>
-                <span class="font-medium text-secondary"
-                  >${{ (item.quantity * +item.price).toFixed(2) }}</span
-                >
+                <span class="font-medium text-secondary">${{ (item.quantity * +item.price).toFixed(2) }}</span>
               </li>
             </ul>
             <div class="border-t border-blush-nude pt-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Subtotal:</span>
-                <span class="font-medium text-secondary"
-                  >${{ cartStore.cartTotal.toFixed(2) }}</span
-                >
+                <span class="font-medium text-secondary">${{ cartStore.cartTotal.toFixed(2) }}</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Shipping:</span>
@@ -177,7 +177,9 @@
           <h2 class="text-2xl font-semibold mb-4 text-primary">
             Payment Method
           </h2>
-          <p class="text-gray-600">Payment integration will go here.</p>
+          <p class="text-gray-600">
+            Payment integration will go here.
+          </p>
         </div>
       </div>
     </div>
