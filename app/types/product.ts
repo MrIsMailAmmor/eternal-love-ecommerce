@@ -2,5 +2,9 @@ export interface Product {
   id: string;
   name: string;
   description: string;
-  price: number;
+  price: string;
+  image: string;
+  category: string;
+  type?: "single" | "box";
+  contains?: Array<{ productId: string; quantity: number }>;
 }

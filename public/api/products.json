@@ -1,0 +1,151 @@
+[
+  {
+    "id": "1",
+    "name": "Elegant Necklace",
+    "description": "A beautiful necklace symbolizing eternal love, perfect for that special someone.",
+    "price": "120.00",
+    "image": "forHer.png",
+    "category": "For Her",
+    "type": "single"
+  },
+  {
+    "id": "2",
+    "name": "Classic Watch",
+    "description": "A classic timepiece for the discerning gentleman, combining style and precision.",
+    "price": "250.00",
+    "image": "forHim.png",
+    "category": "For Him",
+    "type": "single"
+  },
+  {
+    "id": "3",
+    "name": "Celebration Gift Set",
+    "description": "A delightful gift set to celebrate birthdays, filled with joy and surprises.",
+    "price": "85.00",
+    "image": "birthday.png",
+    "category": "Birthday",
+    "type": "single"
+  },
+  {
+    "id": "4",
+    "name": "Couple's Bracelet",
+    "description": "Matching bracelets for couples, a symbol of togetherness and affection.",
+    "price": "95.00",
+    "image": "forHer.png",
+    "category": "For Her",
+    "type": "single"
+  },
+  {
+    "id": "5",
+    "name": "Stylish Wallet",
+    "description": "A sleek and practical leather wallet for men, designed for everyday elegance.",
+    "price": "60.00",
+    "image": "forHim.png",
+    "category": "For Him",
+    "type": "single"
+  },
+  {
+    "id": "6",
+    "name": "Birthday Cake",
+    "description": "A delicious and beautifully decorated cake, perfect for any celebration.",
+    "price": "45.00",
+    "image": "birthday.png",
+    "category": "Birthday",
+    "type": "single"
+  },
+  {
+    "id": "7",
+    "name": "Rose Gold Earrings",
+    "description": "Elegant rose gold earrings that add a touch of sophistication to any outfit.",
+    "price": "75.00",
+    "image": "forHer.png",
+    "category": "For Her",
+    "type": "single"
+  },
+  {
+    "id": "8",
+    "name": "Personalized Cufflinks",
+    "description": "Customizable cufflinks, a unique and thoughtful gift for him.",
+    "price": "110.00",
+    "image": "forHim.png",
+    "category": "For Him",
+    "type": "single"
+  },
+  {
+    "id": "9",
+    "name": "Diamond Ring",
+    "description": "A stunning diamond ring, perfect for engagements or special anniversaries.",
+    "price": "500.00",
+    "image": "forHer.png",
+    "category": "For Her",
+    "type": "single"
+  },
+  {
+    "id": "10",
+    "name": "Luxury Pen Set",
+    "description": "A sophisticated pen set for the executive, ideal for making a statement.",
+    "price": "180.00",
+    "image": "forHim.png",
+    "category": "For Him",
+    "type": "single"
+  },
+  {
+    "id": "11",
+    "name": "Assorted Chocolates",
+    "description": "A delightful assortment of gourmet chocolates.",
+    "price": "30.00",
+    "image": "birthday.png",
+    "category": "Treats",
+    "type": "single"
+  },
+  {
+    "id": "12",
+    "name": "Premium Perfume",
+    "description": "A luxurious fragrance for a special occasion.",
+    "price": "90.00",
+    "image": "forHer.png",
+    "category": "Fragrances",
+    "type": "single"
+  },
+  {
+    "id": "13",
+    "name": "Handwritten Card",
+    "description": "A personalized card with your heartfelt message.",
+    "price": "15.00",
+    "image": "birthday.png",
+    "category": "Add-ons",
+    "type": "single"
+  },
+  {
+    "id": "14",
+    "name": "Silk Pajamas",
+    "description": "Comfortable and luxurious silk pajamas.",
+    "price": "150.00",
+    "image": "forHer.png",
+    "category": "Apparel",
+    "type": "single"
+  },
+  {
+    "id": "15",
+    "name": "Fresh Flowers Bouquet",
+    "description": "A beautiful bouquet of fresh, seasonal flowers.",
+    "price": "60.00",
+    "image": "birthday.png",
+    "category": "Add-ons",
+    "type": "single"
+  },
+  {
+    "id": "16",
+    "name": "Customizable Gift Box",
+    "description": "Create a personalized gift box with a selection of our finest products.",
+    "price": "0.00",
+    "image": "birthday.png",
+    "category": "Gift Boxes",
+    "type": "box",
+    "contains": [
+      { "productId": "11", "quantity": 1 },
+      { "productId": "12", "quantity": 1 },
+      { "productId": "2", "quantity": 1 }
+    ]
+  }
+]
