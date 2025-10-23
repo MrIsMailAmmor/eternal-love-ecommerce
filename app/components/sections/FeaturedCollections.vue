@@ -3,7 +3,6 @@
     <HeartPattern
       main-color="#6B1E1E"
       class="absolute opacity-50 top-0 left-0 z-1"
-      height="fit-content"
     />
     <CoupleTogether
       main-color="#6B1E1E"

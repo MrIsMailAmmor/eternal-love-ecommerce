@@ -1,26 +1,32 @@
 import { defineStore } from "pinia";
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import type { Product } from "~/types/product";
 import type { CartItem } from "~/types/order";
 
 const CART_STORAGE_KEY = "eternal-love-cart";
 
-function loadCartFromLocalStorage(): CartItem[] {
-  if (typeof localStorage !== "undefined") {
-    const savedCart = localStorage.getItem(CART_STORAGE_KEY);
-    return savedCart ? JSON.parse(savedCart) : [];
-  }
-  return [];
-}
-
-function saveCartToLocalStorage(cartItems: CartItem[]) {
-  if (typeof localStorage !== "undefined") {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
-  }
-}
-
 export const useCartStore = defineStore("cart", () => {
-  const items = ref<CartItem[]>(loadCartFromLocalStorage());
+  const items = ref<CartItem[]>([]);
+
+  function init() {
+    
+    if (process.client) {
+      const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+      if (savedCart) {
+        items.value = JSON.parse(savedCart);
+      }
+    }
+  }
+
+  watch(
+    items,
+    (newItems) => {
+      if (process.client) {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newItems));
+      }
+    },
+    { deep: true }
+  );
 
   const addItem = (product: Product) => {
     const existingItem = items.value.find((item) => item.id === product.id);
@@ -29,12 +35,10 @@ export const useCartStore = defineStore("cart", () => {
     } else {
       items.value.push({ ...product, quantity: 1 });
     }
-    saveCartToLocalStorage(items.value);
   };
 
   const removeItem = (productId: string) => {
     items.value = items.value.filter((item) => item.id !== productId);
-    saveCartToLocalStorage(items.value);
   };
 
   const updateItemQuantity = (productId: string, quantity: number) => {
@@ -46,12 +50,12 @@ export const useCartStore = defineStore("cart", () => {
         removeItem(productId);
       }
     }
-    saveCartToLocalStorage(items.value);
   };
 
   const clearCart = () => {
+    console.log("clearing cart");
+    
     items.value = [];
-    saveCartToLocalStorage(items.value);
   };
 
   const cartItems = computed(() => items.value);
@@ -71,5 +75,6 @@ export const useCartStore = defineStore("cart", () => {
     cartItems,
     cartTotal,
     cartItemCount,
+    init,
   };
 });

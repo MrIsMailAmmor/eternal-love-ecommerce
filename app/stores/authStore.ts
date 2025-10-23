@@ -1,41 +1,37 @@
 import { defineStore } from "pinia";
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import type { User } from "~/types/auth";
 import { userService } from "~/services/userService";
 
-interface AuthState {
-  user: User | null;
-  isLoggedIn: boolean;
-}
+
 
 const AUTH_STORAGE_KEY = "eternal-love-auth";
 
-function loadAuthStateFromLocalStorage(): AuthState {
-  console.log("starting auth store");
+export const useAuthStore = defineStore("auth", () => {
+  const user = ref<User | null>(null);
+  const isLoggedIn = ref<boolean>(false);
 
-  if (typeof localStorage !== "undefined") {
-    console.log(
-      "reading from local storage, ",
-      localStorage.getItem(AUTH_STORAGE_KEY)
-    );
-    const savedState = localStorage.getItem(AUTH_STORAGE_KEY);
-    if (savedState) {
-      return JSON.parse(savedState);
+  function init() {
+    if (process.client) {
+      const savedState = localStorage.getItem(AUTH_STORAGE_KEY);
+      if (savedState) {
+        const { user: savedUser, isLoggedIn: savedIsLoggedIn } =
+          JSON.parse(savedState);
+        user.value = savedUser;
+        isLoggedIn.value = savedIsLoggedIn;
+      }
     }
   }
-  return { user: null, isLoggedIn: false };
-}
 
-function saveAuthStateToLocalStorage(state: AuthState) {
-  if (typeof localStorage !== "undefined") {
-    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(state));
-  }
-}
-
-export const useAuthStore = defineStore("auth", () => {
-  const initialState = loadAuthStateFromLocalStorage();
-  const user = ref<User | null>(initialState.user);
-  const isLoggedIn = ref<boolean>(initialState.isLoggedIn);
+  watch(
+    () => ({ user: user.value, isLoggedIn: isLoggedIn.value }),
+    (state) => {
+      if (process.client) {
+        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(state));
+      }
+    },
+    { deep: true }
+  );
 
   const currentUser = computed(() => user.value);
   const isAuthenticated = computed(() => isLoggedIn.value);
@@ -45,39 +41,23 @@ export const useAuthStore = defineStore("auth", () => {
     if (fetchedUser && fetchedUser.email === email) {
       user.value = fetchedUser;
       isLoggedIn.value = true;
-      saveAuthStateToLocalStorage({
-        user: user.value,
-        isLoggedIn: isLoggedIn.value,
-      });
       return true;
     }
     user.value = null;
     isLoggedIn.value = false;
-    saveAuthStateToLocalStorage({
-      user: user.value,
-      isLoggedIn: isLoggedIn.value,
-    });
     return false;
   }
 
-  async function register(userData: Omit<User, "id">) {
+  async function register(userData: Omit<User, "id">, password:string) {
     const newUser: User = { id: `user-${Date.now()}`, ...userData };
     user.value = newUser;
     isLoggedIn.value = true;
-    saveAuthStateToLocalStorage({
-      user: user.value,
-      isLoggedIn: isLoggedIn.value,
-    });
     return true;
   }
 
   function logout() {
     user.value = null;
     isLoggedIn.value = false;
-    saveAuthStateToLocalStorage({
-      user: user.value,
-      isLoggedIn: isLoggedIn.value,
-    });
   }
 
   return {
@@ -88,5 +68,6 @@ export const useAuthStore = defineStore("auth", () => {
     login,
     register,
     logout,
+    init,
   };
 });
